@@ -1,0 +1,24 @@
+NET clk    LOC = E12;
+NET reset  LOC = T14;
+
+# Primary connection
+NET kbclk LOC = "W12"  ;
+NET kbdata LOC = "V11" ;
+
+NET rgb<0> LOC = C8;
+NET rgb<0> LOC = B8;
+NET rgb<0> LOC = B3;
+NET rgb<0> LOC = A3;
+
+NET rgb<1> LOC = D6;
+NET rgb<1> LOC = C6;
+NET rgb<1> LOC = D5;
+NET rgb<1> LOC = C5;
+
+NET rgb<2> LOC = C9;
+NET rgb<2> LOC = B9;
+NET rgb<2> LOC = D7;
+NET rgb<2> LOC = C7;
+
+NET vsync  LOC = B11;
+NET hsync  LOC = C11;

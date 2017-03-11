@@ -1,0 +1,4 @@
+vhdl work "C:\Xilinx92i\pong\vga_sync.vhd"
+vhdl work "C:\Xilinx92i\pong\pong_graph_animate.vhd"
+vhdl work "C:\Xilinx92i\pong\keyPS2controller.vhd"
+vhdl work "C:\Xilinx92i\pong\top.vhd"

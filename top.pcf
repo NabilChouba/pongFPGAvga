@@ -1,0 +1,15 @@
+//! **************************************************************************
+// Written by: Map J.36 on Wed Mar 24 11:31:35 2010
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "kbclk" LOCATE = SITE "W12" LEVEL 1;
+COMP "hsync" LOCATE = SITE "C11" LEVEL 1;
+COMP "reset" LOCATE = SITE "T14" LEVEL 1;
+COMP "rgb<0>" LOCATE = SITE "A3" LEVEL 1;
+COMP "rgb<1>" LOCATE = SITE "C5" LEVEL 1;
+COMP "rgb<2>" LOCATE = SITE "C7" LEVEL 1;
+COMP "kbdata" LOCATE = SITE "V11" LEVEL 1;
+COMP "vsync" LOCATE = SITE "B11" LEVEL 1;
+COMP "clk" LOCATE = SITE "E12" LEVEL 1;
+SCHEMATIC END;

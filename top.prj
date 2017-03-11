@@ -1,0 +1,4 @@
+vhdl work "vga_sync.vhd"
+vhdl work "pong_graph_animate.vhd"
+vhdl work "keyPS2controller.vhd"
+vhdl work "top.vhd"

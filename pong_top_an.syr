@@ -1,0 +1,515 @@
+Release 9.2i - xst J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 2.28 s | Elapsed : 0.00 / 3.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 2.29 s | Elapsed : 0.00 / 3.00 s
+ 
+--> Reading design: pong_top_an.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pong_top_an.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pong_top_an"
+Output Format                      : NGC
+Target Device                      : xc3s700a-4-fg484
+
+---- Source Options
+Top Module Name                    : pong_top_an
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : pong_top_an.lso
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx92i/pong/list_ch12_01_vga_sync.vhd" in Library work.
+Architecture arch of Entity vga_sync is up to date.
+Compiling vhdl file "C:/Xilinx92i/pong/list_ch12_05_pong_gra_an.vhd" in Library work.
+Architecture arch of Entity pong_graph_animate is up to date.
+Compiling vhdl file "C:/Xilinx92i/pong/list_ch12_06_pong_top_an.vhd" in Library work.
+Architecture arch of Entity pong_top_an is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <pong_top_an> in library <work> (architecture <arch>).
+
+Analyzing hierarchy for entity <vga_sync> in library <work> (architecture <arch>).
+
+Analyzing hierarchy for entity <pong_graph_animate> in library <work> (architecture <arch>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <pong_top_an> in library <work> (Architecture <arch>).
+Entity <pong_top_an> analyzed. Unit <pong_top_an> generated.
+
+Analyzing Entity <vga_sync> in library <work> (Architecture <arch>).
+Entity <vga_sync> analyzed. Unit <vga_sync> generated.
+
+Analyzing Entity <pong_graph_animate> in library <work> (Architecture <arch>).
+Entity <pong_graph_animate> analyzed. Unit <pong_graph_animate> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <vga_sync>.
+    Related source file is "C:/Xilinx92i/pong/list_ch12_01_vga_sync.vhd".
+    Found 10-bit up counter for signal <h_count_reg>.
+    Found 10-bit comparator greatequal for signal <h_sync_next$cmp_ge0000> created at line 90.
+    Found 10-bit comparator lessequal for signal <h_sync_next$cmp_le0000> created at line 90.
+    Found 1-bit register for signal <h_sync_reg>.
+    Found 1-bit register for signal <mod2_reg>.
+    Found 10-bit up counter for signal <v_count_reg>.
+    Found 10-bit comparator greatequal for signal <v_sync_next$cmp_ge0000> created at line 94.
+    Found 10-bit comparator lessequal for signal <v_sync_next$cmp_le0000> created at line 94.
+    Found 1-bit register for signal <v_sync_reg>.
+    Found 10-bit comparator less for signal <video_on$cmp_lt0000> created at line 99.
+    Found 10-bit comparator less for signal <video_on$cmp_lt0001> created at line 99.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <vga_sync> synthesized.
+
+
+Synthesizing Unit <pong_graph_animate>.
+    Related source file is "C:/Xilinx92i/pong/list_ch12_05_pong_gra_an.vhd".
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+    Found 8x8-bit ROM for signal <rom_data>.
+    Found 10-bit subtractor for signal <ball_x_r>.
+    Found 10-bit adder for signal <ball_x_r$addsub0000> created at line 150.
+    Found 10-bit up accumulator for signal <ball_x_reg>.
+    Found 10-bit subtractor for signal <ball_y_b>.
+    Found 10-bit adder for signal <ball_y_b$addsub0000> created at line 151.
+    Found 10-bit up accumulator for signal <ball_y_reg>.
+    Found 10-bit comparator greatequal for signal <bar_on$cmp_le0000> created at line 125.
+    Found 10-bit comparator lessequal for signal <bar_on$cmp_le0001> created at line 125.
+    Found 10-bit comparator lessequal for signal <bar_on$cmp_le0002> created at line 125.
+    Found 10-bit comparator lessequal for signal <bar_on$cmp_le0003> created at line 125.
+    Found 10-bit subtractor for signal <bar_y_b>.
+    Found 10-bit adder for signal <bar_y_b$addsub0000> created at line 123.
+    Found 10-bit updown accumulator for signal <bar_y_reg>.
+    Found 10-bit comparator greatequal for signal <bar_y_reg$cmp_ge0000> created at line 136.
+    Found 10-bit comparator lessequal for signal <bar_y_reg$cmp_le0000> created at line 137.
+    Found 10-bit comparator less for signal <bar_y_reg$cmp_lt0000> created at line 136.
+    Found 3-bit subtractor for signal <rom_addr>.
+    Found 1-bit 8-to-1 multiplexer for signal <rom_bit>.
+    Found 3-bit subtractor for signal <rom_col>.
+    Found 10-bit comparator lessequal for signal <sq_ball_on$cmp_le0000> created at line 153.
+    Found 10-bit comparator lessequal for signal <sq_ball_on$cmp_le0001> created at line 153.
+    Found 10-bit comparator lessequal for signal <sq_ball_on$cmp_le0002> created at line 153.
+    Found 10-bit comparator lessequal for signal <sq_ball_on$cmp_le0003> created at line 153.
+    Found 10-bit comparator greatequal for signal <wall_on$cmp_le0000> created at line 113.
+    Found 10-bit comparator lessequal for signal <wall_on$cmp_le0001> created at line 113.
+    Found 10-bit register for signal <x_delta_reg>.
+    Found 10-bit comparator greater for signal <x_delta_reg$cmp_gt0000> created at line 182.
+    Found 10-bit comparator greater for signal <x_delta_reg$cmp_gt0001> created at line 189.
+    Found 10-bit comparator greater for signal <x_delta_reg$cmp_gt0002> created at line 189.
+    Found 10-bit comparator less for signal <x_delta_reg$cmp_gt0003> created at line 186.
+    Found 10-bit comparator greater for signal <x_delta_reg$cmp_gt0004> created at line 186.
+    Found 10-bit comparator greater for signal <x_delta_reg$cmp_gt0005> created at line 184.
+    Found 10-bit comparator lessequal for signal <x_delta_reg$cmp_le0000> created at line 184.
+    Found 10-bit comparator less for signal <x_delta_reg$cmp_lt0000> created at line 181.
+    Found 10-bit register for signal <y_delta_reg>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   3 Accumulator(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred  21 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <pong_graph_animate> synthesized.
+
+
+Synthesizing Unit <pong_top_an>.
+    Related source file is "C:/Xilinx92i/pong/list_ch12_06_pong_top_an.vhd".
+    Found 3-bit register for signal <rgb_reg>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <pong_top_an> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 8x8-bit ROM                                           : 1
+# Adders/Subtractors                                   : 8
+ 10-bit adder                                          : 3
+ 10-bit subtractor                                     : 3
+ 3-bit subtractor                                      : 2
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Accumulators                                         : 3
+ 10-bit up accumulator                                 : 2
+ 10-bit updown accumulator                             : 1
+# Registers                                            : 6
+ 1-bit register                                        : 3
+ 10-bit register                                       : 2
+ 3-bit register                                        : 1
+# Comparators                                          : 27
+ 10-bit comparator greatequal                          : 5
+ 10-bit comparator greater                             : 5
+ 10-bit comparator less                                : 5
+ 10-bit comparator lessequal                           : 12
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s700a.nph' in environment C:\Xilinx92i.
+WARNING:Xst:1710 - FF/Latch  <0> (without init value) has a constant value of 0 in block <x_delta_reg>.
+WARNING:Xst:1710 - FF/Latch  <0> (without init value) has a constant value of 0 in block <y_delta_reg>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 8x8-bit ROM                                           : 1
+# Adders/Subtractors                                   : 8
+ 10-bit adder                                          : 3
+ 10-bit subtractor                                     : 3
+ 3-bit subtractor                                      : 2
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Accumulators                                         : 3
+ 10-bit up accumulator                                 : 2
+ 10-bit updown accumulator                             : 1
+# Registers                                            : 26
+ Flip-Flops                                            : 26
+# Comparators                                          : 27
+ 10-bit comparator greatequal                          : 5
+ 10-bit comparator greater                             : 5
+ 10-bit comparator less                                : 5
+ 10-bit comparator lessequal                           : 12
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <x_delta_reg_9> in Unit <pong_graph_animate> is equivalent to the following 6 FFs/Latches, which will be removed : <x_delta_reg_8> <x_delta_reg_6> <x_delta_reg_5> <x_delta_reg_7> <x_delta_reg_4> <x_delta_reg_3> 
+INFO:Xst:2261 - The FF/Latch <y_delta_reg_9> in Unit <pong_graph_animate> is equivalent to the following 6 FFs/Latches, which will be removed : <y_delta_reg_8> <y_delta_reg_6> <y_delta_reg_5> <y_delta_reg_7> <y_delta_reg_4> <y_delta_reg_3> 
+WARNING:Xst:1710 - FF/Latch  <y_delta_reg_0> (without init value) has a constant value of 0 in block <pong_graph_animate>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <x_delta_reg_0> (without init value) has a constant value of 0 in block <pong_graph_animate>.
+WARNING:Xst:1710 - FF/Latch  <ball_x_reg_0> (without init value) has a constant value of 0 in block <pong_graph_animate>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <ball_y_reg_0> (without init value) has a constant value of 0 in block <pong_graph_animate>.
+
+Optimizing unit <pong_top_an> ...
+
+Optimizing unit <vga_sync> ...
+
+Optimizing unit <pong_graph_animate> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block pong_top_an, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 60
+ Flip-Flops                                            : 60
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : pong_top_an.ngr
+Top Level Output File Name         : pong_top_an
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 9
+
+Cell Usage :
+# BELS                             : 473
+#      GND                         : 1
+#      INV                         : 12
+#      LUT1                        : 22
+#      LUT2                        : 123
+#      LUT3                        : 22
+#      LUT4                        : 64
+#      LUT4_D                      : 3
+#      LUT4_L                      : 1
+#      MUXCY                       : 150
+#      MUXF5                       : 4
+#      VCC                         : 1
+#      XORCY                       : 70
+# FlipFlops/Latches                : 60
+#      FDC                         : 3
+#      FDCE                        : 52
+#      FDE                         : 3
+#      FDPE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 8
+#      IBUF                        : 3
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s700afg484-4 
+
+ Number of Slices:                     132  out of   5888     2%  
+ Number of Slice Flip Flops:            60  out of  11776     0%  
+ Number of 4 input LUTs:               247  out of  11776     2%  
+ Number of IOs:                          9
+ Number of bonded IOBs:                  9  out of    372     2%  
+ Number of GCLKs:                        1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 60    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 57    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 10.324ns (Maximum Frequency: 96.862MHz)
+   Minimum input arrival time before clock: 5.991ns
+   Maximum output required time after clock: 5.531ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 10.324ns (frequency: 96.862MHz)
+  Total number of paths / destination ports: 14407 / 115
+-------------------------------------------------------------------------
+Delay:               10.324ns (Levels of Logic = 17)
+  Source:            pong_graph_an_unit/bar_y_reg_3 (FF)
+  Destination:       pong_graph_an_unit/bar_y_reg_9 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: pong_graph_an_unit/bar_y_reg_3 to pong_graph_an_unit/bar_y_reg_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            10   0.591   0.885  pong_graph_an_unit/bar_y_reg_3 (pong_graph_an_unit/bar_y_reg_3)
+     LUT4:I3->O            3   0.648   0.611  pong_graph_an_unit/Madd_bar_y_b_addsub0000_cy<6>11 (pong_graph_an_unit/Madd_bar_y_b_addsub0000_cy<6>)
+     LUT2:I1->O            1   0.643   0.000  pong_graph_an_unit/Msub_bar_y_b_lut<7> (pong_graph_an_unit/N96)
+     MUXCY:S->O            1   0.632   0.000  pong_graph_an_unit/Msub_bar_y_b_cy<7> (pong_graph_an_unit/Msub_bar_y_b_cy<7>)
+     MUXCY:CI->O           0   0.065   0.000  pong_graph_an_unit/Msub_bar_y_b_cy<8> (pong_graph_an_unit/Msub_bar_y_b_cy<8>)
+     XORCY:CI->O          15   0.844   1.160  pong_graph_an_unit/Msub_bar_y_b_xor<9> (pong_graph_an_unit/bar_y_b<9>)
+     LUT4:I0->O            6   0.648   0.701  pong_graph_an_unit/bar_y_reg_cmp_ge0000233 (pong_graph_an_unit/bar_y_reg_cmp_ge0000)
+     LUT3:I2->O            1   0.648   0.000  pong_graph_an_unit/Maccum_bar_y_reg_lut<0> (pong_graph_an_unit/N62)
+     MUXCY:S->O            1   0.632   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<0> (pong_graph_an_unit/Maccum_bar_y_reg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<1> (pong_graph_an_unit/Maccum_bar_y_reg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<2> (pong_graph_an_unit/Maccum_bar_y_reg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<3> (pong_graph_an_unit/Maccum_bar_y_reg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<4> (pong_graph_an_unit/Maccum_bar_y_reg_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<5> (pong_graph_an_unit/Maccum_bar_y_reg_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<6> (pong_graph_an_unit/Maccum_bar_y_reg_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<7> (pong_graph_an_unit/Maccum_bar_y_reg_cy<7>)
+     MUXCY:CI->O           0   0.065   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<8> (pong_graph_an_unit/Maccum_bar_y_reg_cy<8>)
+     XORCY:CI->O           1   0.844   0.000  pong_graph_an_unit/Maccum_bar_y_reg_xor<9> (pong_graph_an_unit/Result<9>1)
+     FDCE:D                    0.252          pong_graph_an_unit/bar_y_reg_9
+    ----------------------------------------
+    Total                     10.324ns (6.967ns logic, 3.357ns route)
+                                       (67.5% logic, 32.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 124 / 20
+-------------------------------------------------------------------------
+Offset:              5.991ns (Levels of Logic = 12)
+  Source:            btn<1> (PAD)
+  Destination:       pong_graph_an_unit/bar_y_reg_9 (FF)
+  Destination Clock: clk rising
+
+  Data Path: btn<1> to pong_graph_an_unit/bar_y_reg_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            18   0.849   1.211  btn_1_IBUF (btn_1_IBUF)
+     LUT4:I0->O            1   0.648   0.452  pong_graph_an_unit/bar_y_reg_cmp_ge0000233_SW2 (N450)
+     LUT4:I2->O            1   0.648   0.000  pong_graph_an_unit/Maccum_bar_y_reg_lut<1> (pong_graph_an_unit/N63)
+     MUXCY:S->O            1   0.632   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<1> (pong_graph_an_unit/Maccum_bar_y_reg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<2> (pong_graph_an_unit/Maccum_bar_y_reg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<3> (pong_graph_an_unit/Maccum_bar_y_reg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<4> (pong_graph_an_unit/Maccum_bar_y_reg_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<5> (pong_graph_an_unit/Maccum_bar_y_reg_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<6> (pong_graph_an_unit/Maccum_bar_y_reg_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<7> (pong_graph_an_unit/Maccum_bar_y_reg_cy<7>)
+     MUXCY:CI->O           0   0.065   0.000  pong_graph_an_unit/Maccum_bar_y_reg_cy<8> (pong_graph_an_unit/Maccum_bar_y_reg_cy<8>)
+     XORCY:CI->O           1   0.844   0.000  pong_graph_an_unit/Maccum_bar_y_reg_xor<9> (pong_graph_an_unit/Result<9>1)
+     FDCE:D                    0.252          pong_graph_an_unit/bar_y_reg_9
+    ----------------------------------------
+    Total                      5.991ns (4.328ns logic, 1.663ns route)
+                                       (72.2% logic, 27.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              5.531ns (Levels of Logic = 1)
+  Source:            vga_sync_unit/v_sync_reg (FF)
+  Destination:       vsync (PAD)
+  Source Clock:      clk rising
+
+  Data Path: vga_sync_unit/v_sync_reg to vsync
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.591   0.420  vga_sync_unit/v_sync_reg (vga_sync_unit/v_sync_reg)
+     OBUF:I->O                 4.520          vsync_OBUF (vsync)
+    ----------------------------------------
+    Total                      5.531ns (5.111ns logic, 0.420ns route)
+                                       (92.4% logic, 7.6% route)
+
+=========================================================================
+CPU : 12.77 / 15.15 s | Elapsed : 13.00 / 16.00 s
+ 
+--> 
+
+Total memory usage is 172312 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

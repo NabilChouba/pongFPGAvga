@@ -1,0 +1,8 @@
+xst -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -ifn pong_top_an.xst -ofn pong_top_an.syr
+xst -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -ifn pong_top_an.xst -ofn pong_top_an.syr
+ngdbuild -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -dd _ngo -nt timestamp -uc "top.ucf" -p xc3s700a-fg484-4 "pong_top_an.ngc" pong_top_an.ngd
+ngdbuild -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -dd _ngo -nt timestamp -uc "top.ucf" -p xc3s700a-fg484-4 "pong_top_an.ngc" pong_top_an.ngd
+map -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -p xc3s700a-fg484-4 -cm area -pr b -k 4 -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf
+par -ise "C:/Xilinx92i/pong/pong.ise" -w -intstyle ise -ol std -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf
+trce -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -e 3 -s 4 -xml pong_top_an pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf top.ucf
+bitgen -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -f pong_top_an.ut pong_top_an.ncd

@@ -1,0 +1,10 @@
+EN vga_sync NULL C:/Xilinx92i/pong/vga_sync.vhd sub00/vhpl00 1269426611
+EN keyps2controller NULL C:/Xilinx92i/pong/keyPS2controller.vhd sub00/vhpl08 1269426609
+AR pong_top_an arch C:/Xilinx92i/pong/list_ch12_06_pong_top_an.vhd sub00/vhpl05 1269412500
+AR vga_sync arch C:/Xilinx92i/pong/vga_sync.vhd sub00/vhpl01 1269426612
+EN pong_graph_animate NULL C:/Xilinx92i/pong/pong_graph_animate.vhd sub00/vhpl02 1269426613
+EN top NULL C:/Xilinx92i/pong/top.vhd sub00/vhpl06 1269426615
+AR top arch C:/Xilinx92i/pong/top.vhd sub00/vhpl07 1269426616
+EN pong_top_an NULL C:/Xilinx92i/pong/list_ch12_06_pong_top_an.vhd sub00/vhpl04 1269412499
+AR pong_graph_animate arch C:/Xilinx92i/pong/pong_graph_animate.vhd sub00/vhpl03 1269426614
+AR keyps2controller rtl C:/Xilinx92i/pong/keyPS2controller.vhd sub00/vhpl09 1269426610

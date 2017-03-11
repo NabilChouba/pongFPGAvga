@@ -1,0 +1,203 @@
+Release 9.2i par J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+COMBOT::  Wed Mar 24 11:31:47 2010
+
+par -w -intstyle ise -ol std -t 1 top_map.ncd top.ncd top.pcf 
+
+
+Constraints file: top.pcf.
+Loading device for application Rf_Device from file '3s700a.nph' in environment C:\Xilinx92i.
+   "top" is an NCD, version 3.1, device xc3s700a, package fg484, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. The PAR timing summary will list the performance achieved for each clock. Note: For
+   the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high". For a
+   balance between the fastest runtime and best performance, set the effort level to "med".
+
+Device speed data version:  "PRODUCTION 1.36 2007-04-25".
+
+
+Design Summary Report:
+
+ Number of External IOBs                           9 out of 372     2%
+
+   Number of External Input IOBs                  4
+
+      Number of External Input IBUFs              4
+        Number of LOCed External Input IBUFs      4 out of 4     100%
+
+
+   Number of External Output IOBs                 5
+
+      Number of External Output IOBs              5
+        Number of LOCed External Output IOBs      5 out of 5     100%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of BUFGMUXs                        1 out of 24      4%
+   Number of Slices                        155 out of 5888    2%
+      Number of SLICEMs                      0 out of 2944    0%
+
+
+
+Overall effort level (-ol):   Standard 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:9898d1) REAL time: 7 secs 
+
+Phase 2.7
+Phase 2.7 (Checksum:1312cfe) REAL time: 7 secs 
+
+Phase 3.31
+Phase 3.31 (Checksum:1c9c37d) REAL time: 7 secs 
+
+Phase 4.2
+.
+Phase 4.2 (Checksum:26259fc) REAL time: 7 secs 
+
+Phase 5.30
+Phase 5.30 (Checksum:2faf07b) REAL time: 7 secs 
+
+Phase 6.8
+...
+.
+....
+.
+.
+..
+Phase 6.8 (Checksum:9c7785) REAL time: 11 secs 
+
+Phase 7.5
+Phase 7.5 (Checksum:42c1d79) REAL time: 11 secs 
+
+Phase 8.18
+Phase 8.18 (Checksum:4c4b3f8) REAL time: 11 secs 
+
+Phase 9.5
+Phase 9.5 (Checksum:55d4a77) REAL time: 11 secs 
+
+REAL time consumed by placer: 11 secs 
+CPU  time consumed by placer: 8 secs 
+Writing design to file top.ncd
+
+
+Total REAL time to Placer completion: 12 secs 
+Total CPU time to Placer completion: 9 secs 
+
+Starting Router
+
+Phase 1: 976 unrouted;       REAL time: 16 secs 
+
+Phase 2: 902 unrouted;       REAL time: 16 secs 
+
+Phase 3: 191 unrouted;       REAL time: 17 secs 
+
+Phase 4: 191 unrouted; (2935)      REAL time: 17 secs 
+
+Phase 5: 191 unrouted; (0)      REAL time: 17 secs 
+
+Phase 6: 0 unrouted; (0)      REAL time: 17 secs 
+
+Phase 7: 0 unrouted; (0)      REAL time: 17 secs 
+
+Phase 8: 0 unrouted; (0)      REAL time: 17 secs 
+
+Phase 9: 0 unrouted; (0)      REAL time: 17 secs 
+
+
+Total REAL time to Router completion: 17 secs 
+Total CPU time to Router completion: 14 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|           clk_BUFGP | BUFGMUX_X2Y11| No   |   54 |  0.114     |  1.108      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+
+   The Delay Summary Report
+
+
+The NUMBER OF SIGNALS NOT COMPLETELY ROUTED for this design is: 0
+
+   The AVERAGE CONNECTION DELAY for this design is:        0.908
+   The MAXIMUM PIN DELAY IS:                               5.503
+   The AVERAGE CONNECTION DELAY on the 10 WORST NETS is:   2.380
+
+   Listing Pin Delays by value: (nsec)
+
+    d < 1.00   < d < 2.00  < d < 3.00  < d < 4.00  < d < 6.00  d >= 6.00
+   ---------   ---------   ---------   ---------   ---------   ---------
+         606         294          39          19           2           0
+
+Timing Score: 0
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP   |         N/A|    11.616ns|     N/A|           0
+  _BUFGP                                    | HOLD    |     0.861ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 19 secs 
+Total CPU time to PAR completion: 15 secs 
+
+Peak Memory Usage:  169 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 1
+
+Writing design to file top.ncd
+
+
+
+PAR done!

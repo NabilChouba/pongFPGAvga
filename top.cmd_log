@@ -1,0 +1,17 @@
+xst -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -ifn top.xst -ofn top.syr
+xst -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -ifn top.xst -ofn top.syr
+ngdbuild -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -dd _ngo -nt timestamp -uc "top.ucf" -p xc3s700a-fg484-4 "top.ngc" top.ngd
+xst -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -ifn top.xst -ofn top.syr
+ngdbuild -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -dd _ngo -nt timestamp -uc "top.ucf" -p xc3s700a-fg484-4 "top.ngc" top.ngd
+map -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -p xc3s700a-fg484-4 -cm area -pr b -k 4 -c 100 -o top_map.ncd top.ngd top.pcf
+par -ise "C:/Xilinx92i/pong/pong.ise" -w -intstyle ise -ol std -t 1 top_map.ncd top.ncd top.pcf
+trce -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -e 3 -s 4 -xml top top.ncd -o top.twr top.pcf -ucf top.ucf
+bitgen -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -f top.ut top.ncd
+xst -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -ifn top.xst -ofn top.syr
+xst -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -ifn top.xst -ofn top.syr
+xst -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -ifn top.xst -ofn top.syr
+ngdbuild -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -dd _ngo -nt timestamp -uc "top.ucf" -p xc3s700a-fg484-4 "top.ngc" top.ngd
+map -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -p xc3s700a-fg484-4 -cm area -pr b -k 4 -c 100 -o top_map.ncd top.ngd top.pcf
+par -ise "C:/Xilinx92i/pong/pong.ise" -w -intstyle ise -ol std -t 1 top_map.ncd top.ncd top.pcf
+trce -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -e 3 -s 4 -xml top top.ncd -o top.twr top.pcf -ucf top.ucf
+bitgen -ise "C:/Xilinx92i/pong/pong.ise" -intstyle ise -f top.ut top.ncd

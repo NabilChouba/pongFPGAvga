@@ -1,0 +1,3 @@
+vhdl work "list_ch12_05_pong_gra_an.vhd"
+vhdl work "list_ch12_01_vga_sync.vhd"
+vhdl work "list_ch12_06_pong_top_an.vhd"
